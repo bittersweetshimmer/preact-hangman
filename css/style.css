@@ -1,0 +1,104 @@
+:root {
+    --font-family: sans-serif;
+    --foreground: #202020;
+    --background: #e0e0e0;
+
+    --background-brighter: #f0f0f0;
+    --background-darker: #d0d0d0; 
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+
+    font-family: var(--font-family);
+    color: var(--foreground);
+    background-color: var(--background);
+}
+
+#hangman {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: min-content;
+}
+
+#hangman-word {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#hangman-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hangman-buttons-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.hangman-button-letter {
+    border: 1px solid var(--foreground);
+    color: var(--foreground);
+    background-color: var(--background-darker);
+    width: 2em;
+    height: 2em;
+    padding: 0.5em;
+    margin: 0.5em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hangman-button-letter:hover:not(:disabled) {
+    cursor: pointer;
+    background-color: var(--background-brighter);
+}
+
+#hangman-chances {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.space, .letter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 2em;
+    height: 2em;
+    padding: 0.5em;
+    margin: 0.5em;
+    border: 1px solid transparent;
+}
+
+.letter {
+    border-color: var(--foreground);
+    background-color: var(--background-brighter);
+}
+
+.correct {
+    background-color: #a0f0a0;
+}
+
+.incorrect {
+    background-color: #f0a0a0;
+}
+
+.chance {
+    width: 1em;
+    height: 1em;
+    margin: 0.5em;
+    border: 1px solid var(--foreground);
+    border-radius: 100%;
+}
